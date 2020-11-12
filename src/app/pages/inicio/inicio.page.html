@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Inicio</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-padding">
+
+    <!-- Se logado, cumprimenta usuário pelo nome. -->
+    <h2>Olá<span *ngIf="userData"> {{ userData.displayName }}</span>!</h2>
+    <p>Inicio do App</p>
+
+    
+
+    <!-- Somente se não logado -->
+    <div *ngIf="!userData">
+      <p>Logue-se para acessar todos os recursos do aplicativo:</p>
+      <p class="ion-text-center">
+        <ion-button routerLink="/usuario/entrar">
+          <ion-icon slot="start" name="log-in"></ion-icon>
+          Entrar
+        </ion-button>
+      </p>
+    </div>
+
+    <pre>
+Página inicial do aplicativo.
+
+[x] Usuário logado
+[x] Usuário não logado
+[x] Menu lateral
+[x] Menu inferior
+[ ] Seta de retorno
+Local: 'app/pages/inicio/inicio.page'
+Rota: /app/inicio
+Roteamento: app/tabs/tabs-routing.module.ts
+    </pre>
+
+  </div>
+
+</ion-content>

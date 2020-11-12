@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+
+      <!-- Dica: para 'travar' o usuário nesta página, remova 'routerLink="/"' abaixo. -->
+      <ion-back-button icon="chevron-back" defaultHref="/" routerLink="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Novo Perfil</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-padding">
+
+    <!-- Inclui seletor do componente do formulário de perfil -->
+    <app-profile></app-profile>
+
+    <pre>
+Cadastrar um perfil para a o usuário logado.
+
+[x] Usuário logado
+[ ] Usuário não logado
+[ ] Menu lateral
+[ ] Menu inferior
+[x] Seta de retorno
+Local: 'app/usuario/novo/novo.page'
+Rota: /usuario/novo
+Roteamento: app/app-routing.module.ts
+
+    </pre>
+
+  </div>
+
+</ion-content>

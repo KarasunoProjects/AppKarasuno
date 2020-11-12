@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Sair</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-padding">
+
+    <!-- Mostra botão de logout -->
+    <h2>Olá!</h2>
+    <p class="ion-text-justify">Clique no botão abaixo para confirmar a saída do aplicativo.</p>
+    <p class="ion-text-center">
+      <ion-button (click)="logout()">Sair do Aplicativo</ion-button>
+    </p>
+
+    <pre>
+Sair do aplicativo.
+
+[x] Usuário logado
+[ ] Usuário não logado
+[ ] Menu lateral
+[ ] Menu inferior
+[x] Seta de retorno
+Local: 'app/usuario/sair/sair.page'
+Rota: /usuario/sair
+Roteamento: app/app-routing.module.ts
+    </pre>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,117 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+
+          <ion-list-header>Hora do Salão</ion-list-header>
+          <ion-note>Primeiro a Satisfação</ion-note>
+
+          <ion-menu-toggle auto-hide="false">
+
+            <!-- Perfil do logado -->
+            <div *ngIf="userData">
+              
+              <hr>
+
+              <ion-item routerDirection="root" routerLink="/user/profile" lines="none" detail="false">
+                <ion-avatar slot="start"><img src="{{ userData.photoURL }}" alt="{{ userData.displayName }}">
+                </ion-avatar>
+                <ion-label>
+                  <h3>{{ userData.displayName }}</h3>
+                  <small>{{ userData.email }}</small>
+                </ion-label>
+              </ion-item>
+
+              <hr>
+
+            </div>
+
+            <hr>
+
+            <!-- Para logados ou não -->
+            <ion-item routerDirection="root" routerLink="/" lines="none" detail="false">
+              <ion-icon slot="start" name="home"></ion-icon>
+              <ion-label>Início</ion-label>
+            </ion-item>
+
+            <hr>
+
+            <!-- Somente para logados -->
+            <ion-item *ngIf="userData" routerDirection="root" routerLink="/app/teste01" lines="none" detail="false">
+              <ion-icon slot="start" name="cut"></ion-icon>
+              <ion-label>Serviços</ion-label>
+            </ion-item>
+
+            <!-- Somente para não logados -->
+            <ion-item *ngIf="!userData" routerDirection="root" routerLink="/app/teste02" lines="none" detail="false">
+              <ion-icon slot="start" name="cog"></ion-icon>
+              <ion-label>Conheça o Salão</ion-label>
+            </ion-item>
+
+            <!-- Para logados ou não -->
+            <ion-item routerDirection="root" routerLink="/app/teste03" lines="none" detail="false">
+              <ion-icon slot="start" name="newspaper"></ion-icon>
+              <ion-label>Avisos do Salão</ion-label>
+            </ion-item>
+
+            <hr>
+
+            <!-- Somente para não logados -->
+            <ion-item *ngIf="!userData" routerDirection="root" routerLink="/usuario/entrar" lines="none" detail="false">
+              <ion-icon slot="start" name="log-in"></ion-icon>
+              <ion-label>Login / Entrar</ion-label>
+            </ion-item>
+
+            <!-- Somente para logados -->
+            <ion-item *ngIf="userData" routerDirection="root" routerLink="/usuario/perfil" lines="none" detail="false">
+              <ion-icon slot="start" name="person"></ion-icon>
+              <ion-label>Seu perfil</ion-label>
+            </ion-item>
+
+            <!-- Somente para logados -->
+            <ion-item *ngIf="userData" routerDirection="root" routerLink="/usuario/sair" lines="none" detail="false">
+              <ion-icon slot="start" name="log-out"></ion-icon>
+              <ion-label>Logout / Sair</ion-label>
+            </ion-item>
+
+            <hr>
+
+            <!-- Para logados ou não -->
+            <ion-item routerDirection="root" routerLink="app/contatos" lines="none" detail="false">
+              <ion-icon slot="start" name="chatbubbles"></ion-icon>
+              <ion-label>Faça contato</ion-label>
+            </ion-item>
+
+            <!-- Para logados ou não -->
+            <ion-item routerDirection="root" routerLink="app/sobre" lines="none" detail="false">
+              <ion-icon slot="start" name="information-circle"></ion-icon>
+              <ion-label>Informações</ion-label>
+            </ion-item>
+
+            <hr>
+
+            <!-- Somente para logados -->
+            <ion-item *ngIf="userData" routerDirection="root" routerLink="/app/config" lines="none" detail="false">
+              <ion-icon slot="start" name="cog"></ion-icon>
+              <ion-label>Configurações</ion-label>
+            </ion-item>
+
+            <!-- Para logados ou não -->
+            <ion-item routerDirection="root" routerLink="/app/sobre" lines="none" detail="false">
+              <ion-icon slot="start" name="information-circle"></ion-icon>
+              <ion-label>Sobre...</ion-label>
+            </ion-item>
+
+          </ion-menu-toggle>
+
+        </ion-list>
+
+      </ion-content>
+
+      <div class="copyright">&copy; Copyright 2020 Equipe Karasuno.</div>
+
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
