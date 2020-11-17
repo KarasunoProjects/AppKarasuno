@@ -1,0 +1,56 @@
+*{
+
+}
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.fly{
+    height: 400px;
+    width: 320px;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.card{
+    margin: auto;
+    margin-bottom: 20px;
+    width: 270px;
+    font-size: 1rem;
+    justify-content: flex-start;
+}
+.card img{
+    height: 170px;
+    width: 240px;
+    border-radius: 2% 2% 2% 2%;
+}
+.card .title{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+
+
+@media (min-width: 580px) {
+    .iflist {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+        
+    .fly{
+        height: 400px;
+        width: 320px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
+
+  }
