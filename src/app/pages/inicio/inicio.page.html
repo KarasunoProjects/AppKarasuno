@@ -15,17 +15,19 @@
   <div class="ion-padding">
 
     <!-- Se logado, cumprimenta usuário pelo nome. -->
-    <h2>Olá<span *ngIf="userData"> {{ userData.displayName }}</span>!</h2>
-    <p>Inicio do App</p>
-
+    <div class="text">
+      <h2>Olá<span *ngIf="userData"> {{ userData.displayName }}</span>!</h2>
+      <p>Inicio do App</p>
+    </div>
+    <img class="logo" src="https://cdn.discordapp.com/attachments/643876405641478199/778662444129320970/c538a17a-b2d8-486c-88ca-3967830e50f0_200x200.png" alt="">
     
 
     <!-- Somente se não logado -->
-    <div *ngIf="!userData">
+    <div class="text" *ngIf="!userData">
       <p>Logue-se para acessar todos os recursos do aplicativo:</p>
       <p class="ion-text-center">
         <ion-button routerLink="/usuario/entrar">
-          <ion-icon slot="start" name="log-in"></ion-icon>
+          <ion-icon slot="start"  name="log-in"></ion-icon>
           Entrar
         </ion-button>
       </p>
