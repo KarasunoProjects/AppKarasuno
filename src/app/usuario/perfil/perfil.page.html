@@ -12,7 +12,8 @@
 
 <ion-content>
 
-  <div class="ion-padding" *ngIf="userData && userProfile">
+
+    <div class="ion-padding" *ngIf="userData && userProfile">
 
     <ion-card>
 
@@ -116,7 +117,7 @@
 
   </div>
 
-  <div class="ion-padding">
+  <img class="ion-padding">
 
    
     <!--<pre>
@@ -131,10 +132,9 @@ Local: 'app/usuario/perfil/perfil.page'
 Rota: /usuario/perfil
 Roteamento: app/app-routing.module.ts
     </pre>-->
-    
-    
-      conteudo
 
+  <div *ngIf="userData">
+    <img src="${{ userData.photoURL }}" alt="{{ userData.displayName }}">
   </div>
-  
+
 </ion-content>
